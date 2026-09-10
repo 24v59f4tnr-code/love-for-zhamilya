@@ -1,151 +1,181 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Для тебя, Жамиля ❤️</title>
-<style>
-:root{--pink:#ff4f8b;--rose:#ff7aa8;--violet:#b83df0;--bg:#0b0614;--card:rgba(255,255,255,0.06);--text:#f3e8ff;--muted:#d8b4fe}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 50% 50%,#1e0d33 0%,var(--bg) 100%);z-index:-1}
-#stars,#hearts{position:fixed;inset:0;pointer-events:none;z-index:0}
-.star{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;animation:twinkle 3s infinite ease-in-out}
-.heart{position:absolute;font-size:18px;opacity:0.6;animation:float 6s infinite linear}
-@keyframes twinkle{0%,100%{opacity:0.2}50%{opacity:1}}
-@keyframes float{0%{transform:translateY(100vh) scale(0.6);opacity:0}20%{opacity:0.8}80%{opacity:0.8}100%{transform:translateY(-10vh) scale(1.2);opacity:0}}
-main{position:relative;z-index:2}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
-.hero-inner{max-width:720px}.eyebrow{letter-spacing:4px;text-transform:uppercase;font-size:13px;color:var(--rose);margin-bottom:16px;font-weight:600}
-h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,56px);margin:0 0 20px;line-height:1.2;background:linear-gradient(135deg,#fff,var(--rose));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{color:var(--muted);font-size:17px;line-height:1.6;margin:0 0 32px}
-.btn{border:0;color:white;background:linear-gradient(135deg,var(--pink),var(--violet));padding:16px 32px;border-radius:999px;font-size:16px;font-weight:600;cursor:pointer;box-shadow:0 10px 30px rgba(255,79,139,0.3);text-decoration:none;display:inline-block;transition:transform 0.2s}
-.btn:active{transform:scale(0.96)}
-.scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:12px;letter-spacing:2px;animation:bounce 2s infinite}
-@keyframes bounce{0%,20%,50%,80%,100%{transform:translate(-50%,0)}40%{transform:translate(-50%,-8px)}60%{transform:translate(-50%,-4px)}}
-section{padding:85px 20px;max-width:900px;margin:0 auto}
-.section-title{font-family:Georgia,serif;font-size:clamp(26px,4vw,36px);text-align:center;margin:0 0 10px;font-weight:500}
-.section-sub{text-align:center;color:var(--muted);margin:0 0 45px;font-size:15px}
-.card{background:var(--card);border:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(12px);border-radius:24px;padding:32px;box-shadow:0 20px 40px rgba(0,0,0,0.4);margin-bottom:24px}
-.letter{line-height:1.9;font-size:16px;color:#fce7f3}
-.signature{margin-top:24px;font-family:Georgia,serif;font-style:italic;text-align:right;color:var(--rose);font-size:18px}
-.timeline{display:grid;gap:18px}.event{padding:22px;border-left:2px solid var(--pink);position:relative}
-.event h3{margin:0 0 6px;font-size:18px;color:#fff}.event p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
-.reasons{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.reason{padding:24px;border-radius:18px;background:var(--card);border:1px solid rgba(255,255,255,0.06);font-size:15px;line-height:1.5}
-.gallery{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.gallery img{width:100%;border-radius:16px;object-fit:cover;height:320px;box-shadow:0 10px 25px rgba(0,0,0,0.3);transition:transform 0.3s}
-.gallery img:hover{transform:scale(1.02)}
-.final{min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center}
-.final-box{max-width:600px;width:100%}
-.heart-big{font-size:54px;display:block;margin-bottom:20px;animation:pulse 1.5s infinite}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
-.music{position:fixed;right:20px;bottom:20px;z-index:100;background:rgba(20,10,30,0.8);border:1px solid rgba(255,255,255,0.15);color:#fff;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(8px);box-shadow:0 5px 20px rgba(0,0,0,0.5)}
-footer{text-align:center;padding:40px 20px;color:rgba(216,180,254,0.5);font-size:13px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наше маленькое место о любви ❤️</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: linear-gradient(135deg, #0f0c1b, #241432, #1a0b2e);
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+        .star { position: absolute; width: 2px; height: 2px; background: #fff; border-radius: 50%; opacity: 0.3; animation: twinkle 3s infinite ease-in-out; }
+        @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 40px;
+        }
+        .header-card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        h1 { font-size: 24px; margin-bottom: 10px; color: #ffb6c1; }
+        p { font-size: 15px; line-height: 1.5; color: #e0d0e0; }
+
+        .photo-card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .photo-card:hover { transform: translateY(-3px); }
+        .photo-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        .photo-caption {
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #fce4ec;
+        }
+
+        #musicBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 79, 139, 0.85);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 5px 20px rgba(255,79,139,0.4);
+            transition: transform 0.2s;
+        }
+        #musicBtn:active { transform: scale(0.9); }
+
+        .hearts { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+        .heart { position: absolute; bottom: -50px; font-size: 20px; animation: floatUp 6s infinite linear; opacity: 0.7; }
+        @keyframes floatUp { 0% { transform: translateY(0) rotate(0deg); opacity: 0.8; } 100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; } }
+    </style>
 </head>
 <body>
 
-<div id="stars"></div>
-<div id="hearts"></div>
+    <div class="stars" id="stars"></div>
+    <div class="hearts" id="hearts"></div>
 
-<main>
-  <section class="hero" id="top">
-    <div class="hero-inner">
-      <div class="eyebrow">Для самой особенной</div>
-      <h1>Жамиля, это всё для тебя ❤️</h1>
-      <p>Каждое мгновение рядом с тобой наполняет жизнь смыслом, теплом и настоящим счастьем.</p>
-      <a href="#love" class="btn">Открыть моё сердце</a>
+    <div class="container">
+        <div class="header-card">
+            <h1>Для Жамили ❤️</h1>
+            <p>Самое уютное место, созданное только для нас двоих.</p>
+        </div>
+
+        <!-- Карточка с фото 1 -->
+        <div class="photo-card">
+            <img src="IMG_0240.jpeg" alt="Наше фото">
+            <div class="photo-caption">Каждый момент рядом с тобой особенный ✨</div>
+        </div>
+
+        <!-- Карточка с фото 2 -->
+        <div class="photo-card">
+            <img src="IMG_2673.jpeg" alt="Наше фото">
+            <div class="photo-caption">Моя самая любимая 💖</div>
+        </div>
     </div>
-    <div class="scroll">ВНИЗ ↓</div>
-  </section>
 
-  <section id="love">
-    <h2 class="section-title">О моей любви к тебе</h2>
-    <p class="section-sub">Самые искренние слова</p>
-    <div class="card letter">
-      Я люблю тебя не только за красивые моменты, но и за то невероятное тепло, которое ты даришь каждый день. С тобой хочется становиться лучше, строить планы и просто радоваться каждому совместному дню. Ты — мой самый близкий и родной человек.
-      <div class="signature">Твой любимый ❤️</div>
-    </div>
-  </section>
+    <!-- Трек "in the sea" (Reze Arc) -->
+    <audio id="bgMusic" loop>
+        <source src="https://files.catbox.moe/k30e6v.mp3" type="audio/mpeg">
+    </audio>
 
-  <section id="story">
-    <h2 class="section-title">Наша история ✨</h2>
-    <p class="section-sub">Наши важные моменты и шаги</p>
-    <div class="timeline">
-      <div class="card event">
-        <h3>Наша встреча</h3>
-        <p>Момент, который полностью изменил мою жизнь и подарил мне тебя.</p>
-      </div>
-      <div class="card event">
-        <h3>Каждый день вместе</h3>
-        <p>Время, наполненное улыбками, разговорами и уютными вечерами.</p>
-      </div>
-      <div class="card event">
-        <h3>Наше будущее</h3>
-        <p>Впереди нас ждет бесконечное количество счастливых дорог и открытий.</p>
-      </div>
-    </div>
-  </section>
+    <div id="musicBtn">🎵</div>
 
-  <section id="reasons">
-    <h2 class="section-title">За что я тебя люблю</h2>
-    <p class="section-sub">И это далеко не полный список</p>
-    <div class="reasons">
-      <div class="reason">🌟 За твою невероятную улыбку, которая освещает всё вокруг</div>
-      <div class="reason">💖 За твою поддержку и доброе сердце</div>
-      <div class="reason">✨ За то, что рядом с тобой я чувствую себя дома</div>
-      <div class="reason">🥰 За твой смех и удивительные глаза</div>
-    </div>
-  </section>
+    <script>
+        const stars = document.getElementById('stars');
+        for(let i=0; i<60; i++){
+            let s = document.createElement('div');
+            s.className = 'star';
+            s.style.top = Math.random()*100 + '%';
+            s.style.left = Math.random()*100 + '%';
+            s.style.animationDelay = Math.random()*3 + 's';
+            stars.appendChild(s);
+        }
 
-  <section id="photos">
-    <h2 class="section-title">Наши моменты 📸</h2>
-    <p class="section-sub">Наши памятные кадры</p>
-    <div class="gallery">
-      <img src="IMG_0240.jpeg" alt="Наше фото">
-      <img src="IMG_2673.jpeg" alt="Наше фото">
-      <img src="84FC47AA-E080-463B-974E-B3A5440BF471.png" alt="Наше фото">
-      <img src="54D3A344-4416-4C1D-9191-A2E2BBD9C301.png" alt="Наше фото">
-      <img src="BA762E2E-1F08-443E-97A9-B1BBE06AF336.png" alt="Наше фото">
-      <img src="quality_restoration_20260826192328331.jpeg" alt="Наше фото">
-    </div>
-  </section>
+        const hearts = document.getElementById('hearts');
+        const symbols = ['❤️', '✨', '💖', '💫'];
+        for(let i=0; i<15; i++){
+            let h = document.createElement('div');
+            h.className = 'heart';
+            h.innerText = symbols[Math.floor(Math.random()*symbols.length)];
+            h.style.left = Math.random()*100 + '%';
+            h.style.animationDuration = (Math.random()*4 + 5) + 's';
+            h.style.animationDelay = Math.random()*5 + 's';
+            hearts.appendChild(h);
+        }
 
-  <section class="final">
-    <div class="final-box">
-      <span class="heart-big">💖</span>
-      <h2 style="font-family:Georgia,serif; font-size:32px; margin-bottom:15px;">Я выбираю тебя</h2>
-      <p style="color:var(--muted); margin-bottom:30px;">Сегодня, завтра и всегда.</p>
-      <a href="#top" class="btn">Наверх к началу ✨</a>
-    </div>
-  </section>
-</main>
+        const musicBtn = document.getElementById('musicBtn');
+        const bgMusic = document.getElementById('bgMusic');
+        let isPlaying = false;
 
-<footer>
-  Сделано с любовью для Жамили ❤️
-</footer>
+        function toggleMusic() {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicBtn.style.opacity = '0.6';
+                musicBtn.innerText = '🎵';
+                isPlaying = false;
+            } else {
+                bgMusic.play().then(() => {
+                    musicBtn.style.opacity = '1';
+                    musicBtn.innerText = '💖';
+                    isPlaying = true;
+                }).catch(e => console.log("Ожидание тапа"));
+            }
+        }
 
-<script>
-const stars = document.getElementById('stars');
-for(let i=0; i<75; i++){
-  let s = document.createElement('div');
-  s.className = 'star';
-  s.style.top = Math.random()*100 + '%';
-  s.style.left = Math.random()*100 + '%';
-  s.style.animationDelay = Math.random()*3 + 's';
-  stars.appendChild(s);
-}
-const hearts = document.getElementById('hearts');
-const symbols = ['❤️', '✨', '💖', '💫', '🌸'];
-for(let i=0; i<18; i++){
-  let h = document.createElement('div');
-  h.className = 'heart';
-  h.innerText = symbols[Math.floor(Math.random()*symbols.length)];
-  h.style.left = Math.random()*100 + '%';
-  h.style.animationDuration = (Math.random()*4 + 5) + 's';
-  h.style.animationDelay = Math.random()*5 + 's';
-  hearts.appendChild(h);
-}
-</script>
+        musicBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMusic();
+        });
+
+        document.body.addEventListener('click', function startAudioOnce() {
+            if (!isPlaying) {
+                toggleMusic();
+            }
+            document.body.removeEventListener('click', startAudioOnce);
+        }, { once: true });
+    </script>
 </body>
 </html>
